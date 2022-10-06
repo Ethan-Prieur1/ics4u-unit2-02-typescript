@@ -7,15 +7,22 @@
  */
 
 class Stack {
-  stackArray: number[] = []
+  readonly stackArray: number[] = []
 
-  push(pushedNumber: number): void {
+  // getters
+  public getStack(): number[] {
+    return this.stackArray
+  }
+
+  // methods
+  public push(pushedNumber: number): void {
     // add a number to the array
     this.stackArray.push(pushedNumber)
   }
 
-  showStack(): void {
-    console.log(this.stackArray)
+  public pop(): void {
+    // pops a number from the stack
+    this.stackArray.pop()
   }
 }
 export = Stack

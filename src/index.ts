@@ -12,7 +12,11 @@ import promptSync from 'prompt-sync'
 const myNewStack = new Stack()
 
 const prompt = promptSync()
-const someNumberString = prompt('Enter a number: ')
+const someNumberString = prompt('enter a number: ')
 const someNumberInt = parseInt(someNumberString)
 myNewStack.push(someNumberInt)
-myNewStack.showStack()
+console.log('stack before pop: ', myNewStack.getStack())
+myNewStack.pop()
+console.log('stack after pop: ', myNewStack.getStack())
+
+console.log('\nDone')
